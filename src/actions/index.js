@@ -5,7 +5,6 @@
  * More Info: https://redux.js.org/basics/actions
  *
  */
-
 let nextTodoId = 0;
 
 /**
