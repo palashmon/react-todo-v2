@@ -14,6 +14,8 @@ const todo = (state, action = {}) => {
       };
     case 'TOGGLE_TODO':
       return state.id !== action.id ? state : { ...state, completed: !state.completed };
+    case 'TOGGLE_ALL_TODO':
+      return { ...state, completed: action.checked };
     default:
       return state;
   }
@@ -29,6 +31,7 @@ const todos = (state = [], action) => {
     case 'ADD_TODO':
       return [...state, todo(undefined, action)];
     case 'TOGGLE_TODO':
+    case 'TOGGLE_ALL_TODO':
       return state.map(t => todo(t, action));
     default:
       return state;

@@ -38,6 +38,13 @@ export const toggleTodo = id => {
   };
 };
 
+export const toggleAllTodo = checked => {
+  return {
+    type: 'TOGGLE_ALL_TODO',
+    checked
+  };
+};
+
 /**
  * Constants used for setting todo list filters
  */
